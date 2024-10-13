@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Libros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Libros Disponibles</h1>
+        <div class="row">
+            <div class="col-md-4 book-item">
+                <img src="{% static 'images/1.jpg' %}" alt="{{ libros.0.titulo }}" class="book-img img-fluid">
+                <h2>{{ libros.0.titulo }}</h2>
+                <p>Autor: {{ libros.0.autor }}</p>
+                <a href="{% url 'reservar' libros.0.titulo %}" class="btn btn-primary">Reservar</a>
+            </div>
+            <div class="col-md-4 book-item">
+                <img src="{% static 'images/2.jpg' %}" alt="{{ libros.1.titulo }}" class="book-img img-fluid">
+                <h2>{{ libros.1.titulo }}</h2>
+                <p>Autor: {{ libros.1.autor }}</p>
+                <a href="{% url 'reservar' libros.1.titulo %}" class="btn btn-primary">Reservar</a>
+            </div>
+            <div class="col-md-4 book-item">
+                <img src="{% static 'images/3.jpg' %}" alt="{{ libros.2.titulo }}" class="book-img img-fluid">
+                <h2>{{ libros.2.titulo }}</h2>
+                <p>Autor: {{ libros.2.autor }}</p>
+                <a href="{% url 'reservar' libros.2.titulo %}" class="btn btn-primary">Reservar</a>
+            </div>
+            <div class="col-md-4 book-item">
+                <img src="{% static 'images/4.jpg' %}" alt="{{ libros.3.titulo }}" class="book-img img-fluid">
+                <h2>{{ libros.3.titulo }}</h2>
+                <p>Autor: {{ libros.3.autor }}</p>
+                <a href="{% url 'reservar' libros.3.titulo %}" class="btn btn-primary">Reservar</a>
+            </div>
+            <div class="col-md-4 book-item">
+                <img src="{% static 'images/5.jpg' %}" alt="{{ libros.4.titulo }}" class="book-img img-fluid">
+                <h2>{{ libros.4.titulo }}</h2>
+                <p>Autor: {{ libros.4.autor }}</p>
+                <a href="{% url 'reservar' libros.4.titulo %}" class="btn btn-primary">Reservar</a>
+            </div>
+            <div class="col-md-4 book-item">
+                <img src="{% static 'images/6.webp' %}" alt="{{ libros.5.titulo }}" class="book-img img-fluid">
+                <h2>{{ libros.5.titulo }}</h2>
+                <p>Autor: {{ libros.5.autor }}</p>
+                <a href="{% url 'reservar' libros.5.titulo %}" class="btn btn-primary">Reservar</a>
+            </div>
+        </div>
+        <a href="{% url 'mis_reservas' %}" class="btn btn-secondary mt-4">Ver mis reservas</a>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
